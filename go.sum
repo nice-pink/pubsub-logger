@@ -68,6 +68,8 @@ github.com/googleapis/gax-go/v2 v2.14.0 h1:f+jMrjBPl+DL9nI4IQzLUxMq7XrAqFYB7hBPq
 github.com/googleapis/gax-go/v2 v2.14.0/go.mod h1:lhBCnjdLrWRaPvLWhmc8IS24m9mr07qSYnHncrgo+zk=
 github.com/nice-pink/goutil v0.3.0 h1:HGblWV0mCxBpN73WU13K9wYmz2P5Hde0wHfcCzyjIDo=
 github.com/nice-pink/goutil v0.3.0/go.mod h1:9YMyl3vf6t4AJ6tlAHr2OKgunTG2DocOQqSDbKGnFe8=
+github.com/nice-pink/goutil v0.3.1-0.20241212102510-2fcc51a60a35 h1:6kX9QjLybk1V+To0cgbv//VaI6wcXfohwqfr1NTjbcg=
+github.com/nice-pink/goutil v0.3.1-0.20241212102510-2fcc51a60a35/go.mod h1:9YMyl3vf6t4AJ6tlAHr2OKgunTG2DocOQqSDbKGnFe8=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
