@@ -16,6 +16,7 @@ func main() {
 	var serviceName = flag.String("serviceName", "pubsub-util", "Will appear in logs.")
 	var project = flag.String("project", "", "Google project.")
 	var subscription = flag.String("subscription", "", "Subscription.")
+	var subscriptionTimeout = flag.Int("subscriptionTimeout", 30, "Subscription timeout.")
 	var observeAttr = flag.String("observeAttr", "", "Observe specific attributes.")
 	var logHost = flag.String("logHost", "", "Logstash host.")
 	var logPort = flag.Int("logPort", 0, "Logstash port.")
@@ -29,10 +30,10 @@ func main() {
 	log.Info(os.Args)
 
 	rLog := util.NewRemoteLog(*logHost, *logPort, *logLevel, *serviceName)
-	ObservePubSub(*project, *subscription, *observeAttr, rLog)
+	ObservePubSub(*project, *subscription, *observeAttr, time.Duration(*subscriptionTimeout)*time.Second, rLog)
 }
 
-func ObservePubSub(project, subscription, observeAttr string, l *log.RLog) error {
+func ObservePubSub(project, subscription, observeAttr string, timeout time.Duration, l *log.RLog) error {
 	client, err := msg.NewPubSubHandler(project)
 	if err != nil {
 		log.Err(err, "could not create pubsub client")
@@ -42,7 +43,7 @@ func ObservePubSub(project, subscription, observeAttr string, l *log.RLog) error
 	for {
 		data, attr, err := client.Subscribe(subscription, 30)
 		if err != nil {
-			time.Sleep(time.Duration(500) * time.Millisecond)
+			time.Sleep(time.Duration(1) * time.Second)
 			continue
 		}
 		l.Debug(string(data), "::", attr)
