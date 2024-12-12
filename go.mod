@@ -4,7 +4,7 @@ go 1.23.0
 
 require (
 	cloud.google.com/go/pubsub v1.45.3
-	github.com/nice-pink/goutil v0.3.1-0.20241212102510-2fcc51a60a35
+	github.com/nice-pink/goutil v0.3.1
 )
 
 require (

@@ -46,6 +46,6 @@ func ObservePubSub(project, subscription, observeAttr string, timeout time.Durat
 			time.Sleep(time.Duration(1) * time.Second)
 			continue
 		}
-		l.Debug(string(data), "::", attr)
+		l.Info(string(data), "::", attr)
 	}
 }
